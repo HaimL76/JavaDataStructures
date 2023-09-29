@@ -14,6 +14,8 @@ class HelloWorldApp {
         if (args != null && args.length > 0)
             textFile = args[0];
 
+        textFile = "C:\\Users\\oeila\\Documents\\What is Java and why do I need it_.html";
+
         System.out.println("textFile="+textFile); // Display the string.
 
         List<String> list = new ArrayList<String>();
@@ -24,7 +26,7 @@ class HelloWorldApp {
             try {
                 while ((line = in.readLine()) != null) {
 
-                    String[] strs = line.split("[ \\t\\.\\(\\)\\+\\<\\>\\,\\{\\}\\:\\-\\=]");
+                    String[] strs = line.split("[ \\_\\/\\t\\.\\(\\)\\+\\<\\>\\,\\{\\}\\:\\-\\=]");
 
                     if (strs != null && strs.length > 0)
 
@@ -38,7 +40,7 @@ class HelloWorldApp {
                                 boolean matchFound = matcher.find();
 
                                 if (matchFound)
-                                    list.add(strs[i]);
+                                    list = BinaryTree.<String>addKey(list, str);
                             }
                         }
                 }
@@ -50,7 +52,7 @@ class HelloWorldApp {
 
         }
 
-        list = new ArrayList<String>();
+        //list = new ArrayList<String>();
 
         list = BinaryTree.<String>addKey(list, "banana");
         list = BinaryTree.<String>addKey(list, "apple");
@@ -67,6 +69,12 @@ class HelloWorldApp {
         String key = "ssjd";
 
         Boolean isFound = BinaryTree.<String>findKey(list, key);
+
+        System.out.println("key: "+key+", isFound: "+isFound);
+
+        key = "java";
+
+        isFound = BinaryTree.<String>findKey(list, key);
 
         System.out.println("key: "+key+", isFound: "+isFound);
     }

@@ -106,8 +106,11 @@ class BinaryTree {
 
             System.out.print(", key: "+key+", pair.key: "+pair.key+", comp: "+comp);
 
-            if (comp == 0)
-                return new MyPair<MyPair<TKey, TVal>, List<MyPair<TKey, TVal>>>(pair, null);
+            if (comp == 0) {
+                System.out.println();
+
+                return new MyPair<MyPair<TKey, TVal>, List<MyPair<TKey, TVal>>>(pair, list);
+            }
 
             if (diff > 0) {
                 System.out.println();
