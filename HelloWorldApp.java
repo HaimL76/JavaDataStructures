@@ -57,7 +57,7 @@ class HelloWorldApp {
         list = BinaryTree.<String>addKey(list, "peach");
         list = BinaryTree.<String>addKey(list, "orange");
         list = BinaryTree.<String>addKey(list, "apricot");
-        list = BinaryTree.<String>addKey(list, "grape");
+        list = BinaryTree.<String>addKey(list, "grape ");
 
         for (int i = 0; i < list.size(); i++)
             System.out.print(list.get(i)+", ");
